@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+//age : valeur de la variable
+//&age : adresse de la variabke
+
+void pointeur(int *pointeurSurMinutes, int *pointeurSurHeures);
+
+int main(int argc, char *argv[])
+{
+    int heures = 0;
+    int minutes = 125;
+
+
+    pointeur(&minutes, &heures);  //on envoie l'adresse du nombre à la fonction
+    printf("%d \n", heures);
+    printf("%d \n", minutes);
+}
+
+void pointeur(int *pointeurSurMinutes, int *pointeurSurHeures)
+{
+    *pointeurSurHeures = *pointeurSurMinutes / 60;
+    *pointeurSurMinutes = *pointeurSurMinutes % 60;
+}
