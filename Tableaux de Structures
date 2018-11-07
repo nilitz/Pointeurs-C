@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <math.h>
+
+typedef struct
+{
+    int R;
+    int G;
+    int B;
+}Pixel;
+
+Pixel image[10] = {{1,2,3},{4,5,6}};
+
+int main(int argc, char **argv)
+{
+    for(int i = 0; i <= 9; i++)
+    {
+        printf("%d", image[i].R);
+        printf("%d", image[i].G);
+        printf("%d \n", image[i].B);
+    }
+
+
+    scanf("%d", image[3].G);
+    return 0;
+}
