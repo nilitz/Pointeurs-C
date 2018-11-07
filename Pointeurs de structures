@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+struct temps {
+    int heures;
+    int minutes;
+    double secondes;
+};
+
+
+int main(void)
+{
+    struct temps t;
+    struct temps *p = &t;
+    int *pointeurSurHeuresT = &t.heures;
+
+    (*p).heures = 12;   //p->heures = 12;
+    (*p).minutes = 32;  //p->minutes = 32;
+    (*p).secondes = 45.360; //p->secondes = 45.360;
+
+
+    return 0;
+}
